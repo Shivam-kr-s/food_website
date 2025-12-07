@@ -1,0 +1,227 @@
+/* Global Reset and Utilities */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f8f8;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Header and Navigation */
+header {
+    background: #5A8C8C; /* A pleasant, cozy color */
+    color: #fff;
+    padding-top: 20px;
+    min-height: 70px;
+    border-bottom: #3C6363 3px solid;
+}
+
+header h1 {
+    float: left;
+}
+
+header nav {
+    float: right;
+    margin-top: 10px;
+}
+
+header ul {
+    list-style: none;
+}
+
+header li {
+    display: inline;
+    padding: 0 20px 0 20px;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+header a:hover {
+    color: #E6B0AA; /* A warm highlight color */
+}
+
+/* Hero Section */
+.hero {
+    background: url('restaurant-interior.jpg') no-repeat center center/cover;
+    /* You would need to replace 'restaurant-interior.jpg' with an actual image file */
+    min-height: 500px;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4); /* Dark overlay */
+    z-index: 1;
+}
+
+.hero .container {
+    z-index: 2;
+}
+
+.hero h2 {
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+#cta-button {
+    background: #E6B0AA;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#cta-button:hover {
+    background: #D5948E;
+}
+
+/* General Section Styles */
+main section {
+    padding: 40px 0;
+    text-align: center;
+}
+
+main section:nth-child(even) {
+    background: #fff;
+}
+
+main section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #3C6363;
+}
+
+/* Menu Section */
+#menu-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+    text-align: left;
+}
+
+.menu-item {
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.menu-item h3 {
+    color: #5A8C8C;
+    margin-bottom: 5px;
+}
+
+.menu-item span {
+    display: block;
+    font-weight: bold;
+    color: #E6B0AA;
+    margin-top: 10px;
+}
+
+/* Reservation Form */
+#reservation-form {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+#reservation-form label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+#reservation-form input, 
+#reservation-form button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+#reservation-form button {
+    background: #5A8C8C;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+#reservation-form button:hover {
+    background: #3C6363;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+/* Responsive Design (simple example) */
+@media (max-width: 768px) {
+    header h1,
+    header nav {
+        float: none;
+        text-align: center;
+    }
+
+    header nav {
+        margin-top: 0;
+        padding-bottom: 10px;
+    }
+
+    header li {
+        padding: 0 10px;
+    }
+
+    .hero h2 {
+        font-size: 40px;
+    }
+}
